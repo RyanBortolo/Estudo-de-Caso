@@ -49,29 +49,6 @@ create table matricula (
     foreign key (id_curso) references curso(id_curso) on delete cascade
 );
 
--- criação da tabela nota
-create table nota (
-    id_nota int primary key auto_increment,
-    id_matricula int,
-    id_disciplina int,
-    nota decimal(5,2) check (nota >= 0 and nota <= 10),
-    frequencia decimal(5,2) check (frequencia >= 0 and frequencia <= 100),
-    foreign key (id_matricula) references matricula(id_matricula) on delete cascade,
-    foreign key (id_disciplina) references disciplina(id_disciplina) on delete cascade
-);
-
--- criação da tabela nota
-create table nota (
-    id_nota int primary key auto_increment,
-    id_matricula int,
-    id_disciplina int,
-    nota decimal(5,2) check (nota >= 0 and nota <= 10),
-    frequencia decimal(5,2) check (frequencia >= 0 and frequencia <= 100),
-    foreign key (id_matricula) references matricula(id_matricula) on delete cascade,
-    foreign key (id_disciplina) references disciplina(id_disciplina) on delete cascade
-    
-);
-
 
 CREATE TABLE nota (
     id_nota INT PRIMARY KEY AUTO_INCREMENT,
